@@ -16,9 +16,9 @@
 ## Relational Entities on Databricks
 In Databricks, Databases are Hive Metastore Schemas, that's why we can use two syntaxes to create tables:
 
-    - `CREATE DATABASE db_name`
+- `CREATE DATABASE db_name`
 
-    - `CREATE SCHEMA db_name`
+- `CREATE SCHEMA db_name`
 
 A Hive Metastore is a repository of metadata that stores information of Databases, Tables and partitions.
 
@@ -27,6 +27,6 @@ When you create a table/database, they are stored in the default hive directory 
 
 In Databricks there are two types of tables:
 
-    - Managed tables: created under the database hive directory dbfs:/user/hive/warehouse . When you run a DROP command, both the data and the underlying data files will be deleted. `CREATE TABLE table_name`
-    
-    - External tables: created outside the database directory dbfs:/custom/path . When you run a DROP command, only the data will be deleted, but not the underlying data files (which can be restored). `CREATE TABLE table_name LOCATION 'path'`. The definition of the database will be in the Hive Metastored under the default database, while the data files will be stored in the specified external location.
+- Managed tables: created under the database hive directory dbfs:/user/hive/warehouse . When you run a DROP command, both the data and the underlying data files will be deleted. `CREATE TABLE table_name`
+
+- External tables: created outside the database directory dbfs:/custom/path . When you run a DROP command, only the data will be deleted, but not the underlying data files (which can be restored). `CREATE TABLE table_name LOCATION 'path'`. The definition of the database will be in the Hive Metastored under the default database, while the data files will be stored in the specified external location.
